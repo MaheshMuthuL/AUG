@@ -1,0 +1,230 @@
+/* Global */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+  color: #333;
+  display: flex;
+  justify-content: center;
+}
+
+h1, h2, h3 {
+  font-family: "Playfair Display", serif;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+  background: white;
+  box-sizing: border-box;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  font-family: "Playfair Display", serif;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.nav-buttons button {
+  margin-left: 15px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.invest-btn {
+  background: #ffd60a;
+}
+
+.sign-btn {
+  background: #f1f1f1;
+  color: #555;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-text {
+  font-size: 100px;
+  color: #7d7d7d;
+}
+
+.subtext {
+  font-size: 20px;
+  font-style: italic;
+  margin-top: -20px;
+}
+
+.gold-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  width: 220px;
+  border-radius: 15px;
+  margin-top: 20px;
+  box-shadow: 5px 5px 0px #ffd60a;
+  text-align: center;
+}
+
+.price {
+  font-size: 26px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.trend.up {
+  color: green;
+}
+
+.bg-shape {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: #ffd60a;
+  z-index: -1;
+}
+
+.left-shape {
+  top: 0;
+  left: 80px;
+  border-radius: 0 100px 100px 0;
+}
+
+.right-shape {
+  top: 150px;
+  right: 80px;
+  border-radius: 100px 0 0 100px;
+}
+
+/* About Section */
+.about {
+  max-width: 700px;
+  margin: 120px auto;
+  text-align: center;
+}
+
+.about .italic {
+  font-style: italic;
+  color: #666;
+}
+
+/* Products Section */
+.products {
+  margin: 100px 0;
+  text-align: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  justify-items: center;
+  padding: 0 50px;
+}
+
+.card-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-bg::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: #ffd60a;
+  left: -50px;
+  top: 20px;
+  border-radius: 0 100px 100px 0;
+  z-index: -1;
+}
+
+.right-bg::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: #ffd60a;
+  right: -50px;
+  bottom: -20px;
+  border-radius: 100px 0 0 100px;
+  z-index: -1;
+}
+
+.card {
+  background: #eee;
+  padding: 40px;
+  width: 280px;
+  height: 180px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* FAQ */
+.faq {
+  max-width: 800px;
+  margin: 100px auto;
+  text-align: left;
+}
+
+.faq-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.faq-answer {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Footer */
+.footer {
+  margin-top: 80px;
+  padding: 20px;
+  background: #f8f8f8;
+  font-size: 14px;
+  text-align: center;
+  width: 100%;
+}
