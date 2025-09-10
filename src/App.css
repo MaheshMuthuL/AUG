@@ -1,0 +1,243 @@
+/* Main container */
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;  /* full screen center */
+  background-color: #fff;
+  position: relative;
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  
+}
+
+/* Yellow background shape */
+.yellow-shape {
+  position: fixed;       /* stays relative to viewport */
+  top: 50%;              /* vertically center relative to viewport */
+  left: 0;               /* stick to left */
+  transform: translateY(-50%); /* adjust exact vertical center */
+  width: 720px;
+  height: 360px;
+  background: #ffd700;
+  border-radius: 0 180px 180px 0;
+  opacity: 0.9;
+  z-index: 0;
+  margin-top: 100px;
+}
+
+/* Form wrapper auto-expands with content */
+.signup-form-wrapper {
+  position: relative;
+  background: rgba(252, 252, 252, 0.95);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 400px;        /* fixed width */
+  max-width: 90%;      /* responsive for small screens */
+  height: auto;        /* dynamically expands */
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+/* Ensure textarea placeholder matches input font */
+.signup-form-wrapper textarea::placeholder {
+  font-family: 'Inter', sans-serif; /* same as inputs */
+  font-size: 14px;                  /* match input size */
+  color: #999;                       /* optional, match input placeholder color */
+}
+
+
+
+/* Header with back/close buttons */
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #666;
+}
+
+.back-button, .close-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+  font-size: 14px;
+  padding: 0;
+}
+
+/* Form title */
+h2 {
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+}
+.signup-button:disabled {
+  background-color: #aaa;   /* greyed out */
+  cursor: not-allowed;      /* show "not-allowed" cursor */
+}
+
+/* Inputs */
+.signup-form-wrapper input,
+.signup-form-wrapper textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.signup-form-wrapper input:focus,
+.signup-form-wrapper textarea:focus {
+  border-color: #333;
+}
+
+/* Password label & toggle */
+.password-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.toggle-password {
+  background: none;
+  border: none;
+  font-size: 12px;
+  color: #666;
+  cursor: pointer;
+}
+
+/* Signup button */
+.signup-button {
+  width: 100%;
+  padding: 0.9rem;
+  background-color: #222;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+.signup-button:hover {
+  background-color: #444;
+}
+
+/* Options row (remember me / help) */
+.options-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;  /* vertical alignment */
+  font-size: 12px;
+  color: #666;
+}
+
+.remember-me input {
+  margin-right: 6px;
+  width: 14px;
+  height: 14px;
+}
+
+
+.help-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+  font-size: 12px;
+  padding: 0;
+}
+
+/* Sign-in link */
+.signin-link {
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+}
+
+.signin-link a {
+  font-weight: 600;
+  color: #000;
+  text-decoration: underline;
+}
+
+/* Accessibility hidden class */
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+          clip-path: inset(50%) !important;
+  height: 1px !important; 
+  margin: -1px !important; 
+  overflow: hidden !important; 
+  padding: 0 !important; 
+  position: absolute !important; 
+  width: 1px !important; 
+  white-space: nowrap !important;
+}
+
+/* Password rules box */
+.password-rules {
+  background-color: #f9f9f9;   /* light grey box */
+  border: 1px solid #ddd;      /* subtle border */
+  border-radius: 8px;           /* rounded corners */
+  padding: 12px 16px;           /* inner spacing */
+  margin: 8px 0 16px 0;         /* spacing from inputs */
+  font-size: 13px;              /* slightly smaller font */
+  color: #555;                  /* matches other labels */
+  line-height: 1.5;             /* better readability */
+}
+
+.password-rules p {
+  font-weight: 500;             /* slightly bolder for heading */
+  margin-bottom: 6px;
+}
+
+.password-rules ul {
+  padding-left: 20px;           /* indent list */
+  margin: 0;
+}
+
+.password-rules ul ul {
+  padding-left: 20px;           /* nested list indent */
+  margin: 4px 0 0 0;
+  list-style-type: disc;
+}
+
+.password-rules li {
+  margin-bottom: 4px;
+}
+
+
+.password-status {
+  margin-top: 6px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.password-status .success {
+  color: green;
+}
+
+.password-status .error {
+  color: red;
+}
