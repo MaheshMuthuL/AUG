@@ -7,6 +7,7 @@ import SignUp from "./components/signup";
 import SignIn from "./components/signin";
 import Dashboard from "./components/dashboard";
 import Layout from "./components/Layout";
+import LandingPage from "./components/Landing";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -16,9 +17,9 @@ function App() {
       <Routes>
         <Route path="/signup" element={<SignUp />} />
         <Route path="/signin" element={<SignIn />} />
-
         <Route element={<Layout />}>
           <Route path="/" element={<Dashboard />} />
+          <Route path="/home" element={<LandingPage/>} />
         </Route>
       </Routes>
     </Router>

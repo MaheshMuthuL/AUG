@@ -25,7 +25,7 @@ const Dashboard = () => {
         <div className="hero-container">
           <div className="hero-content-center">
             <h1 className="hero-title">
-              <span className="aug-text">aug</span>
+              <span className="aug-text">AUG</span>
               <span className="subtitle">Digital Tokens</span>
             </h1>
           </div>

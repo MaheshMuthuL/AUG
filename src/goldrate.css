@@ -1,0 +1,73 @@
+.goldrate-card {
+  position: absolute;
+  top: 150px;
+  right: 150px;
+  z-index: 888;
+  border: 1px solid black;
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  width: 320px; /* smaller width */
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 10px 10px 0px -1px rgba(215,170,59,1);
+}
+
+.goldrate-card:hover {
+  transform: translateY(-3px);
+}
+
+.goldrate-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.goldrate-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.goldrate-live {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #d32f2f;
+  background: rgba(211, 47, 47, 0.1);
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.goldrate-live::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #d32f2f;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+
+.goldrate-chart-container {
+  height: 120px; /* smaller chart height */
+  margin-bottom: 12px;
+}
+
+.goldrate-rate {
+  font-size: 1rem;
+  color: #333;
+}
+
+.goldrate-loading {
+  font-style: italic;
+  color: #888;
+}

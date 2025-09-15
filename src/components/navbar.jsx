@@ -1,6 +1,8 @@
 // Navbar.jsx
 import React, { useState } from "react";
 import { Menu, X, HelpCircle } from "lucide-react";
+import { Link } from "react-router-dom";
+
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,12 +11,14 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  
+
   return (
     <nav className="navbar">
       <div className="nav-container">
         {/* Left: Logo */}
         <div className="nav-left">
-          <span className="logo-text">aug</span>
+          <span className="logo-text">AUG</span>
         </div>
 
         {/* Center: Menu Links */}
@@ -29,7 +33,9 @@ const Navbar = () => {
         <div className="nav-right">
           <button className="nav-btn">Contact - Us</button>
           <button className="nav-btn-secondary">Sign in</button>
-          <HelpCircle size={35} />
+         <Link to="/help" className="help-btn">
+            <HelpCircle size={27} />
+          </Link>
         </div>
 
         {/* Hamburger for mobile */}
