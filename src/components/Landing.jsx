@@ -1,12 +1,15 @@
 import React from "react";
 import "../Landing.css";
+import leftCard from "../assets/left-card.png";
+import rightCard from "../assets/right-card.png";
+
 
 export default function LandingPage() {
   return (
     <div className="lp-container">
       {/* Hero Section */}
       <section className="lp-hero">
-      <div className="yellow-shape" ></div>
+      <div className="yellow-shape" style={{height:"350px"}}></div>
         <div className="lp-hero-left">
           <h1>Ready to <br/>take on many<br/> challenges</h1>
         </div>
@@ -26,7 +29,6 @@ export default function LandingPage() {
       {/* Section 2 */}
       <section className="lp-content-block">
         <div className="lp-text">
-            <div className="yellow-shape-right"></div>
           <h2>Why link gold with tokens?</h2>
           <p>
             Gold has always been a timeless symbol of wealth and stability,
@@ -37,21 +39,30 @@ export default function LandingPage() {
           </p>
         </div>
 
+        <div className="lp-image">
+          <img src={leftCard} alt="Gold Token" />
+        </div>
       </section>
 
+
+
       {/* Section 3 */}
-      <section className="lp-content-block lp-reverse">
-        <div className="lp-text">
+      <section className="lp-content-block">
+        <div className="lp-image">
+          <img src={leftCard} alt="Gold Token" style={{transform: "scaleX(-1)"}}/>
+        </div>
+
+        <div className="lp-text" style={{margin:"0 100px 0 0"}}>
           <h2>Why link gold with tokens?</h2>
           <p>
-            Gold-backed tokens combine the traditional value of gold with the
-            modern efficiency of blockchain technology. By linking digital
-            tokens to physical gold reserves, these assets offer stability,
-            accessibility, and trust, allowing investors to trade or hold
-            fractional ownership of gold with ease. This fusion bridges the gap
-            between physical wealth and digital innovation.
+            Gold has always been a timeless symbol of wealth and stability,
+            trusted for its intrinsic value across generations. By linking it
+            with digital tokens, its enduring strength is combined with modern
+            technology, making gold easy to trade, store, and transfer
+            digitally.
           </p>
         </div>
+
       </section>
 
       {/* Final CTA */}
