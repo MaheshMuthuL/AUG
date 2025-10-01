@@ -2,6 +2,7 @@ import React from "react";
 import "../Landing.css";
 import leftCard from "../assets/left-card.png";
 import rightCard from "../assets/right-card.png";
+import goldCard from "../assets/gold-card.png";
 
 
 export default function LandingPage() {
@@ -38,13 +39,10 @@ export default function LandingPage() {
             digitally.
           </p>
         </div>
-
         <div className="lp-image">
           <img src={leftCard} alt="Gold Token" />
         </div>
       </section>
-
-
 
       {/* Section 3 */}
       <section className="lp-content-block">
@@ -62,18 +60,17 @@ export default function LandingPage() {
             digitally.
           </p>
         </div>
-
       </section>
 
       {/* Final CTA */}
       <section className="lp-cta">
         <div className="lp-cta-left">
           <div className="lp-icon">➜</div>
-          <h2>Ready to take on many challenges</h2>
+          <h1>Ready to take on many<br/> challenges</h1>
           <button className="lp-primary">See now ? →</button>
         </div>
-        <div className="lp-cta-right">
-          <div className="lp-card lp-small-card">$0.00</div>
+        <div className="lp-image">
+            <img src={goldCard} alt="" />
         </div>
       </section>
     </div>

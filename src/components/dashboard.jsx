@@ -154,13 +154,6 @@ const Dashboard = () => {
           </div>
         </div>
       </section>
-      {/* Footer */}
-      {/* <footer className="footer">
-        <div className="footer-container">
-          <p>&copy; 2024 AUG. All rights reserved. Built with React.</p>
-        </div>
-      </footer> */}
-      {/* <Footer /> */}
     </div>
   );
 };

@@ -23,10 +23,10 @@ const Navbar = () => {
 
         {/* Center: Menu Links */}
         <div className={`nav-center ${isMenuOpen ? "active" : ""}`}>
-          <a href="#" className="nav-link">Home</a>
-          <a href="#" className="nav-link">About</a>
+          <a href="/home" className="nav-link">Home</a>
           <a href="#" className="nav-link">Digi</a>
           <a href="#" className="nav-link">Tokens</a>
+          <a href="#" className="nav-link">About</a>
         </div>
 
         {/* Right: Buttons + Icon */}
