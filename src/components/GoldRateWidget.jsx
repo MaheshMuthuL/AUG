@@ -87,8 +87,4 @@ export default function GoldRateWidget() {
       <p className="goldrate-rate">{rate.toLocaleString()} INR / oz</p>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 8daad538ccc1f371124ae01f6d71d2554d2d8289

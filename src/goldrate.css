@@ -1,12 +1,7 @@
 .goldrate-card {
   position: absolute;
-<<<<<<< HEAD
-  top: 150px;
-  right: 150px;
-=======
   top: 140px;
   right: 200px;
->>>>>>> 8daad538ccc1f371124ae01f6d71d2554d2d8289
   z-index: 888;
   border: 1px solid black;
   background: #fff;
@@ -75,8 +70,4 @@
 .goldrate-loading {
   font-style: italic;
   color: #888;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 8daad538ccc1f371124ae01f6d71d2554d2d8289

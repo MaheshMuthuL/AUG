@@ -166,12 +166,8 @@ body {
 
 /* Hero Section - Centered */
 .hero {
-<<<<<<< HEAD
-  padding: 140px 0 0 0;
-=======
   margin-top: 70px;
   padding: 80px 0;
->>>>>>> 8daad538ccc1f371124ae01f6d71d2554d2d8289
   margin-bottom: 90px;
   background: #ffffff;
   overflow: hidden;
@@ -531,8 +527,4 @@ body {
   opacity: 0.9;
   z-index: 1;
   margin-top: 1300px;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 8daad538ccc1f371124ae01f6d71d2554d2d8289
