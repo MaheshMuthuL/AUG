@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "https://96b18888811a.ngrok-free.app"; // change to your backend URL
+const API_URL = "https://unconglomerated-loreta-nonconsoling.ngrok-free.dev"; // change to your backend URL
 
 // Sends OTP to the user's email
 export const sendOtp = async ({ email }) => {

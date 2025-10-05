@@ -19,7 +19,7 @@ const SignIn = () => {
       const token = response.token;
       localStorage.setItem("token", token);
       alert("Signin successful!");
-      window.location.href = "/dashboard";
+      window.location.href = "/";
     } catch (error) {
       console.error(error);
       alert(error.response?.data?.message || "Signin failed");
@@ -33,9 +33,6 @@ const SignIn = () => {
         <div className="header">
           <button className="back-button" aria-label="Back">
             &larr; Back
-          </button>
-          <button className="close-button" aria-label="Close">
-            &times;
           </button>
         </div>
         <h2>Sign in</h2>

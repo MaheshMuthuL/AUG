@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Menu, X, TrendingUp } from "lucide-react";
 import "../Dashboard.css";
-import Navbar from "./navbar.jsx";
-import GoldRateWidget from "../components/GoldRateWidget";
-import Footer from "./footer.jsx";
+import Navbar from "../components/navbar.jsx";
+import GoldRateWidget from "../components/GoldRateWidget.jsx";
+import Footer from "../components/footer.jsx";
 const Dashboard = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -154,13 +154,6 @@ const Dashboard = () => {
           </div>
         </div>
       </section>
-      {/* Footer */}
-      {/* <footer className="footer">
-        <div className="footer-container">
-          <p>&copy; 2024 AUG. All rights reserved. Built with React.</p>
-        </div>
-      </footer> */}
-      {/* <Footer /> */}
     </div>
   );
 };

@@ -494,10 +494,23 @@ form {
 
 @media (min-width: 769px) {
   .navbar-container {
-    max-width: 1200px;
+    max-width: 1250px;
   }
 }
 
+.navbar a {
+  text-decoration: none;
+}
 
+/* Ensure hover/focus states are still styled */
+.nav-link:hover,
+.logo-text:hover {
+  text-decoration: none; /* Keep it none even on hover */
+  opacity: 0.8; /* Add a subtle effect */
+}
 
-
+/* You might want to remove underlines from buttons if they are links */
+.nav-btn,
+.nav-btn-secondary {
+  text-decoration: none;
+}
