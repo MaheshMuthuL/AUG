@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Life+Savers:wght@400;700;800&family=Limelight&display=swap');
+/* -------------------------
+   Global Container
+------------------------- */
+.lp-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  padding: 100px 0 4rem;
+  background: #fff;
+  font-family: Arial, sans-serif;
+}
+
+/* -------------------------
+   DigiToken Section
+------------------------- */
+.lp-digitoken {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  top: 70px;
+  /* padding: 10px 100px 80px; */
+  position: relative;
+}
+
+.lp-what {
+  font-size: 5.5rem;
+  font-weight: 400;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  z-index: 2;
+}
+
+.yellow-shape-lp-left {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 400px;
+  height: 360px;
+  background: #ffd700;
+  border-radius: 0 180px 180px 0;
+  opacity: 0.9;
+  z-index: 1;
+  margin-top: 100px;
+}
+
+.lp-left-box img{
+    height: 400px;
+}
+.lp-right-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  z-index: 2;
+}
+
+.lp-digi {
+  font-size: 5.5rem;
+  font-weight: bold;
+  margin: 10px 0 20px;
+  color: #828282;
+  font-family: "Limelight", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+.lp-digi span{
+  font-family: "Life Savers", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lp-description {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.lp-description.right-align {
+  text-align: justify;
+  margin-left: 70px;
+}
+
+/* -------------------------
+   Buy Gold Section
+------------------------- */
+.buygold-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 70vh;
+}
+
+.buygold-section .lp-card {
+  position: relative;
+  z-index: 2;
+  max-width: 400px;
+  width: 100%;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.buygold-section .yellow-shape-lp-right {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 500px;
+  height: 400px;
+  background: #ffd700;
+  border-radius: 180px 0 0 180px;
+  opacity: 0.9;
+  z-index: 1;
+}
+
+.lp-card-header {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.lp-card-header button {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+  cursor: pointer;
+}
+
+.lp-card-header .lp-active {
+  background: #f7cf00;
+  border: none;
+}
+
+.lp-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.lp-card-body input {
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button.lp-primary {
+  background: #ffd700;
+  color: #333;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  align-self: center;
+}
+
+/* -------------------------
+   Content Section (Why Gold)
+------------------------- */
+.lp-content-block {
+  display: flex;
+  align-items: center;
+  gap: 200px;
+  height: 70vh;
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.lp-text {
+  flex: 1;
+  max-width: 500px;
+  margin-left: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.lp-text h2 {
+  margin-bottom: 1rem;
+  font-size: 2.3rem;
+}
+
+.lp-text p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.lp-image img {
+  max-height: 500px;
+  object-fit: contain;
+}
+
+/* -------------------------
+   CTA Section
+------------------------- */
+.lp-cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70vh;
+  padding-left: 25vh;
+  gap: 3rem;
+}
+
+.lp-cta-left {
+  flex: 1;
+}
+
+.lp-cta-left h1 {
+  padding: 40px 0;
+}
+
+.lp-icon {
+  background: #0a4a57;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  width: 70px;
+  font-size: 2rem;
+  transform: rotate(15deg);
+  margin-bottom: 1rem;
+}
+
+.lp-cta-right {
+  flex: 1;
+}
