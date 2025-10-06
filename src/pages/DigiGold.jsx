@@ -257,6 +257,7 @@ const handleBuyNow = async () => {
                 <input
                   type="number"
                   placeholder="Enter Amount"
+                  min="0"
                   value={amount}
                   onChange={handleAmountChange}
                   disabled={loading} // ✅ disable input when loading
@@ -267,6 +268,15 @@ const handleBuyNow = async () => {
                 <div className="display-box">{grams || "0"}</div>
               </div>
             </div>
+            <div className="instruct">
+              <h4>Instructions:</h4>
+              <p className="gold-summary">
+                <b>Conversion Rule:</b> 1 AUG = 1 gram of gold. <br/>
+                <b>Gold Price:</b> ₹6000/gram → 1 AUG = ₹6000. <br/>
+                <b>Your Balance:</b> 15 AUG (15 grams of gold). <br/>
+                <b>Options:</b> Buy, Sell, or Redeem AUG.<br/>
+              </p>
+            </div>
             <button
               className="lp-primary"
               onClick={handleBuyNow}
@@ -274,7 +284,6 @@ const handleBuyNow = async () => {
             >
               {loading ? "Processing..." : "Buy Now"}
             </button>
-            {/* {paymentStatus && <p className="status-text">{paymentStatus}</p>} */}
           </div>
         ) : (
           <div className="form-content fade-in">
@@ -284,6 +293,7 @@ const handleBuyNow = async () => {
                 <input
                   type="number"
                   placeholder="Enter Grams"
+                  min="0"
                   value={grams}
                   onChange={handleGramsChange}
                   disabled={loading}
@@ -294,6 +304,16 @@ const handleBuyNow = async () => {
                 <div className="display-box">{amount || "0"}</div>
               </div>
             </div>
+            <div className="instruct">
+              <h4>Instructions:</h4>
+              <p className="gold-summary">
+                <b>Conversion Rule:</b> 1 AUG = 1 gram of gold. <br/>
+                <b>Gold Price:</b> ₹6000/gram → 1 AUG = ₹6000. <br/>
+                <b>Your Balance:</b> 15 AUG (15 grams of gold). <br/>
+                <b>Options:</b> Buy, Sell, or Redeem AUG.<br/>
+              </p>
+            </div>
+
             <button
                 className="lp-primary"
                 onClick={handleBuyNow}

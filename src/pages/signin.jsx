@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../App.css";
 import { signinUser } from "../api_backend/api.js";
 
@@ -10,6 +10,8 @@ const SignIn = () => {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(true);
+
+  const navigate = useNavigate();
 
   const handleSignin = async (e) => {
     e.preventDefault();
@@ -31,8 +33,8 @@ const SignIn = () => {
       <div className="yellow-shape" />
       <div className="signup-form-wrapper">
         <div className="header">
-          <button className="back-button" aria-label="Back">
-            &larr; Back
+          <button className="back-button" aria-label="Back" onClick={() => {navigate('/')}}>
+            &larr; Home
           </button>
         </div>
         <h2>Sign in</h2>

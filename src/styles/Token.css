@@ -1,33 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Life+Savers:wght@400;700;800&family=Limelight&display=swap');
-/* -------------------------
+
+/* ==============================
    Global Container
-------------------------- */
+============================== */
 .lp-container {
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  gap: 10rem;
   padding: 100px 0 4rem;
   background: #fff;
   font-family: Arial, sans-serif;
 }
 
-/* -------------------------
+/* ==============================
    DigiToken Section
-------------------------- */
+============================== */
 .lp-digitoken {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   top: 70px;
-  /* padding: 10px 100px 80px; */
   position: relative;
 }
 
-.lp-what {
-  font-size: 5.5rem;
-  font-weight: 400;
-  margin-left: 20px;
-  margin-bottom: 20px;
+.lp-left-box img {
+  height: 400px;
+}
+
+.lp-right-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   z-index: 2;
 }
 
@@ -45,17 +49,6 @@
   margin-top: 100px;
 }
 
-.lp-left-box img{
-    height: 400px;
-}
-.lp-right-box {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  z-index: 2;
-}
-
 .lp-digi {
   font-size: 5.5rem;
   font-weight: bold;
@@ -63,14 +56,11 @@
   color: #828282;
   font-family: "Limelight", sans-serif;
   font-weight: 400;
-  font-style: normal;
-
 }
 
-.lp-digi span{
+.lp-digi span {
   font-family: "Life Savers", serif;
   font-weight: 400;
-  font-style: normal;
 }
 
 .lp-description {
@@ -78,35 +68,14 @@
   font-size: 1.1rem;
   color: #555;
   line-height: 1.6;
-  max-width: 600px;
-}
-
-.lp-description.right-align {
+  max-width: 700px;
   text-align: justify;
-  margin-left: 70px;
+  margin-left: 20px;
 }
 
-/* -------------------------
-   Buy Gold Section
-------------------------- */
-.buygold-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  height: 70vh;
-}
-
-.buygold-section .lp-card {
-  position: relative;
-  z-index: 2;
-  max-width: 400px;
-  width: 100%;
-  background: #fff;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-}
+/* ==============================
+   Hero Section (Buy Gold Section)
+============================== */
 
 .buygold-section .yellow-shape-lp-right {
   position: absolute;
@@ -121,37 +90,153 @@
   z-index: 1;
 }
 
-.lp-card-header {
+/* ==============================
+   Card Wrapper
+============================== */
+.lp-card {
+  background: #ffdb19;
+  padding: 2rem;
+  border-radius: 40px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  width: 100%;
+    margin-left:150px;
+
+}
+
+/* ==============================
+   Toggle Switch
+============================== */
+.toggle-wrapper {
+  position: relative;
   display: flex;
-  gap: 1rem;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  padding: 4px; 
+}
+
+.toggle-slider {
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: 4px;
+  right: 4px;
+  width: calc(50% - 8px); 
+  background: #ffdb19;
+  border-radius: 30px;
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+.toggle-slider.rs {
+  transform: translateX(0%);
+}
+.toggle-slider.grams {
+  transform: translateX(calc(100% + 8px)); 
+}
+
+.toggle-btn {
+  flex: 1;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  background: transparent;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  z-index: 2;
+  transition: color 0.3s ease;
+}
+
+/* ==============================
+   Form Box
+============================== */
+.form-box {
+  margin-top: 1.2rem;
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #FFEC79 51.44%, #F4EEC7 100%);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease-in-out;
+}
+
+.form-container {
+  position: relative;
+  min-height: 150px;
+}
+
+.form-content {
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ==============================
+   Inputs
+============================== */
+.input-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
   margin-bottom: 1rem;
 }
 
-.lp-card-header button {
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  border: 1px solid #ddd;
-  background: #f9f9f9;
-  cursor: pointer;
-}
-
-.lp-card-header .lp-active {
-  background: #f7cf00;
-  border: none;
-}
-
-.lp-card-body {
+.input-group {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
 }
 
-.lp-card-body input {
+.input-group label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #0a4a57;
+}
+
+.input-group input {
   padding: 0.7rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  border-radius: 8px;
+  border: 1.5px solid #ccc;
+  outline: none;
+  font-size: 15px;
+  transition: all 0.3s ease;
 }
 
+.input-group input[readonly] {
+  background: #f5f5f5;
+  color: #666;
+  cursor: not-allowed;
+}
+
+/* Display box for non-editable values */
+.display-box {
+  padding: 0.7rem;
+  border-radius: 8px;
+  background: #fff;
+  border: 1.5px solid #ccc;
+  font-size: 15px;
+  color: #333;
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+}
+
+.highlight {
+  border: 2px solid #0a4a57 !important;
+  box-shadow: 0 0 8px rgba(10, 74, 87, 0.5);
+}
+
+/* ==============================
+   Buttons
+============================== */
 button.lp-primary {
   background: #ffd700;
   color: #333;
@@ -162,12 +247,37 @@ button.lp-primary {
   font-size: 16px;
   cursor: pointer;
   transition: background 0.3s ease;
-  align-self: center;
+  margin: auto;
+  display: block;
 }
 
-/* -------------------------
-   Content Section (Why Gold)
-------------------------- */
+/* ==============================
+   Spinner
+============================== */
+.spinner-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+
+.spinner {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #fff;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ==============================
+   Why Gold Section
+============================== */
 .lp-content-block {
   display: flex;
   align-items: center;
@@ -201,9 +311,9 @@ button.lp-primary {
   object-fit: contain;
 }
 
-/* -------------------------
+/* ==============================
    CTA Section
-------------------------- */
+============================== */
 .lp-cta {
   display: flex;
   justify-content: space-between;
@@ -235,6 +345,106 @@ button.lp-primary {
   margin-bottom: 1rem;
 }
 
-.lp-cta-right {
-  flex: 1;
+/* ==============================
+   Modal Styles
+============================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-box {
+  background: linear-gradient(135deg, #fff, #f9e79f);
+  border-radius: 16px;
+  padding: 30px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-box h2 {
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.modal-box p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #333;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.lp-primary {
+  background: #d4af37;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.lp-secondary {
+  background: #eee;
+  color: #333;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.modal-failed {
+  background: linear-gradient(135deg, #fff, #f28b82);
+}
+
+.modal-failed h2 {
+  color: #b71c1c;
+}
+
+.modal-failed .lp-primary {
+  background: #b71c1c;
+}
+
+.modal-waiting {
+  background: linear-gradient(135deg, #fff, #f9f1d7);
+}
+
+.modal-waiting h2 {
+  color: #b8860b;
+}
+
+.lp-connect-wallet{
+  color: #ffffff;
+  background-color: #000;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 5px;
+  font-weight: 600;
 }
